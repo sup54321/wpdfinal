@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WORLD PEACE AND DEVELOPMENT GROUP LIMITED</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* Header */
+    #header {
+        background:#2c3e50;
+        color:white;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:20px 30px;
+        position:relative;
+    }
+    .logo {
+        height:50px;
+        width:auto;
+    }
+    #header h1 {
+        flex:1;
+        text-align:center;
+        font-size:2em;
+    }
+    .burger {
+        display:flex;
+        flex-direction:column;
+        cursor:pointer;
+        gap:5px;
+        z-index:1001;
+    }
+    .burger div {
+        width:25px;
+        height:3px;
+        background:white;
+        border-radius:2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Nav Menu */
+    nav ul {
+        list-style:none;
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:#34495e;
+        flex-direction:column;
+        width:220px;
+        display:none;
+        text-align:left;
+        padding:15px;
+        border-radius:5px;
+        z-index:1000;
+    }
+    nav ul.show { display:flex; }
+    nav ul li { margin:5px 0; }
+    nav ul li a { color:white; text-decoration:none; font-weight:bold; display:block; padding:10px; border-radius:4px; transition: background 0.3s; }
+    nav ul li a:hover { background:#4a5b72; }
+
+    /* Section styles */
+    a.section-link { text-decoration:none; display:block; }
+    section {
+        padding:60px 20px;
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        gap:30px;
+        border-radius:10px;
+        overflow:hidden;
+        margin:20px;
+        background:white;
+        box-shadow:0 5px 15px rgba(0,0,0,0.05);
+        transition: background 0.3s;
+    }
+    section img {
+        width:100%;
+        max-width:400px;
+        border-radius:10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    section img:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    section .content { flex:1; min-width:250px; color: #2c3e50; }
+    section h3 { font-size:2em; margin-bottom:15px; }
+    section p { font-size:1.1em; line-height:1.6; }
+
+    /* Footer */
+    footer { background:#34495e; color:white; text-align:center; padding:60px 20px; }
+
+    /* Responsive */
+    @media (max-width:768px){
+        section { flex-direction:column; text-align:center; }
+        section img, section .content { width:100%; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <h1>WORLD PEACE AND DEVELOPMENT GROUP LIMITED</h1>
+    <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="investment.html">Driving Global Investment</a></li>
+            <li><a href="infrastructure.html">Advancing Infrastructure & Energy</a></li>
+            <li><a href="urban.html">Transforming Urban Development</a></li>
+            <li><a href="renewal.html">Driving Urban Renewal</a></li>
+            <li><a href="partnership.html">Strategic Partnership</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- About Section -->
+<a href="about.html" class="section-link">
+    <section>
+        <img src="images/about-us.jpg" alt="About Us">
+        <div class="content">
+            <h3>About Us</h3>
+            <p>WORLD PEACE AND DEVELOPMENT GROUP LIMITED is dedicated to fostering global peace and sustainable development through impactful initiatives and community empowerment.</p>
+        </div>
+    </section>
+</a>
+
+<!-- Mission Section -->
+<a href="mission.html" class="section-link">
+    <section>
+        <img src="images/our-mission.jpg" alt="Our Mission">
+        <div class="content">
+            <h3>Our Mission</h3>
+            <p>To promote peace, drive sustainable development, and empower communities through innovative solutions and collaborative efforts.</p>
+        </div>
+    </section>
+</a>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 WORLD PEACE AND DEVELOPMENT GROUP LIMITED. All rights reserved.</p>
+</footer>
+
+<!-- Burger Toggle Script -->
+<script>
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    burger.classList.toggle("active");
+});
+burger.addEventListener("click", () => {
+    burger.classList.toggle("open");
+});
+const style = document.createElement("style");
+style.textContent = `
+    .burger.open div:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .burger.open div:nth-child(2) { opacity: 0; }
+    .burger.open div:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>

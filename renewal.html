@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driving Urban Renewal - WORLD PEACE AND DEVELOPMENT GROUP LIMITED</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+/* Reset & body */
+body {
+    margin:0;
+    font-family:'Arial', sans-serif;
+    background:#f5f6fa;
+    color:#2c3e50;
+    line-height:1.6;
+}
+
+/* Header */
+#header {
+    background:#2c3e50;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 30px;
+    flex-wrap:wrap;
+    position:relative;
+}
+#header h1 {
+    flex:1;
+    text-align:center;
+    font-size:2em;
+    margin:0;
+}
+.logo {
+    height:50px;
+    width:auto;
+}
+.burger {
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+    gap:5px;
+}
+.burger div {
+    width:25px;
+    height:3px;
+    background:white;
+    border-radius:2px;
+    transition: all 0.3s ease;
+}
+
+/* Nav Menu */
+nav ul {
+    list-style:none;
+    position:absolute;
+    top:70px;
+    right:20px;
+    background:#34495e;
+    flex-direction:column;
+    width:220px;
+    display:none;
+    text-align:left;
+    padding:15px;
+    border-radius:5px;
+    z-index:1000;
+}
+nav ul.show { display:flex; }
+nav ul li { margin:5px 0; }
+nav ul li a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    display:block;
+    padding:10px;
+    border-radius:4px;
+    transition: background 0.3s;
+}
+nav ul li a:hover { background:#4a5b72; }
+
+/* Main */
+main { max-width:900px; margin:40px auto; padding:0 20px; }
+main h2 { font-size:2em; margin-bottom:20px; text-align:center; }
+main p { font-size:1.1em; margin-bottom:20px; }
+
+/* Footer */
+footer { background:#34495e; color:white; text-align:center; padding:40px 20px; margin-top:40px; }
+
+/* Responsive */
+@media(max-width:768px){
+    #header h1 { 
+        order:3; 
+        width:100%; 
+        margin:10px 0; 
+        font-size:1.5em;
+    }
+    nav ul { 
+        top:100%; 
+        right:0; 
+        width:100%; 
+        border-radius:0; 
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <h1>Driving Urban Renewal</h1>
+    <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="investment.html">Driving Global Investment</a></li>
+            <li><a href="infrastructure.html">Advancing Infrastructure & Energy</a></li>
+            <li><a href="urban.html">Transforming Urban Development</a></li>
+            <li><a href="renewal.html">Driving Urban Renewal</a></li>
+            <li><a href="partnership.html">Strategic Partnership</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<main>
+    <h2>Urban Renewal Strategy</h2>
+    <p>The renewal and renovation work mainly includes historical blocks, old towns and
+villages, dilapidated factories and shanty towns. There are currently 12 urban renewal
+projects, such as Heart of the City, North Hill district renewal, Guangsheng village
+renovation and so on. With a scale of more than 5 million square meters and an
+investment of over 65 billion yuan in total, this project is the main driving force for the
+urban renewal and upgrading of Zhuhai.
+Industrial park development and operation
+It includes new industrial town, industrial park, business incubator, distinctive towns and
+various types of parks; the work focus is on the parks' industry orientation, planning and
+design, land consolidation, municipal infrastructure construction, industrial carrier
+construction, industry introduction and investment attraction, industrial operation
+service, etc. 15 projects, such as Fushan new industrial town and Hengqin financial
+industry base, are now under construction, which covers an area of about 160 square
+kilometers. WPD and Chinese Owned Enterprises has invested a total of 74 billion yuan
+in these projects to promote the level of urban industry development in all respects, and
+contribute to industrial upgrading and cluster development.</p>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 WORLD PEACE AND DEVELOPMENT GROUP LIMITED. All rights reserved.</p>
+</footer>
+
+<!-- Burger Toggle Script -->
+<script>
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    burger.classList.toggle("active");
+    burger.classList.toggle("open");
+});
+
+// Burger animation
+const style = document.createElement("style");
+style.textContent = `
+    .burger.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.open div:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>

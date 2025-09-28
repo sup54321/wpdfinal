@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - WORLD PEACE AND DEVELOPMENT GROUP LIMITED</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif; }
+    body { background:#f5f6fa; color:#2c3e50; line-height:1.6; }
+
+    /* Header */
+    #header { 
+        display:flex; 
+        align-items:center; 
+        justify-content:space-between; 
+        padding:20px 30px; 
+        background:#2c3e50; 
+        flex-wrap:wrap; 
+        position:relative;
+    }
+    #header h1 { 
+        flex:1; 
+        text-align:center; 
+        font-size:2em; 
+        margin:0; 
+        color:white;
+    }
+
+    /* Logo */
+    .logo { height:50px; width:auto; }
+
+    /* Burger Menu */
+    .burger { display:flex; flex-direction:column; cursor:pointer; gap:5px; z-index:1001; }
+    .burger div { width:25px; height:3px; background:white; border-radius:2px; transition: all 0.3s ease; }
+
+    /* Nav Menu */
+    nav ul {
+        list-style:none;
+        position:absolute;
+        top:70px; 
+        right:20px; 
+        background:#34495e;
+        flex-direction:column;
+        width:220px; 
+        display:none;
+        padding:15px;
+        border-radius:5px;
+        z-index:1000;
+    }
+    nav ul.show { display:flex; }
+    nav ul li { margin:5px 0; }
+    nav ul li a { 
+        color:white; 
+        text-decoration:none; 
+        font-weight:bold; 
+        display:block; 
+        padding:10px; 
+        border-radius:4px; 
+        transition: background 0.3s;
+    }
+    nav ul li a:hover { background:#4a5b72; }
+
+    /* Main */
+    main { max-width:900px; margin:40px auto; padding:0 20px; }
+    main h2 { font-size:2em; margin-bottom:20px; text-align:center; }
+    main p { font-size:1.1em; margin-bottom:20px; }
+
+    /* Footer */
+    footer { background:#34495e; color:white; text-align:center; padding:40px 20px; margin-top:40px; }
+
+    /* Responsive adjustments */
+    @media(max-width:768px){
+        #header { flex-direction:column; }
+        #header h1 { margin:15px 0; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <h1>About Us</h1>
+    <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="investment.html">Driving Global Investment</a></li>
+            <li><a href="infrastructure.html">Advancing Infrastructure & Energy</a></li>
+            <li><a href="urban.html">Transforming Urban Development</a></li>
+            <li><a href="renewal.html">Driving Urban Renewal</a></li>
+            <li><a href="partnership.html">Strategic Partnership</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<main>
+    <h2>Driving Global Investment, Sustainability, and Cooperation</h2>
+
+    <p>World Peace and Development Group Limited (WPD) was established as one of China's sovereign wealth investment vehicles, incorporated in accordance with China's Company Law, with a capital of $300 billion. WPD serves as a vehicle to diversify China's foreign investment and foreign exchange holdings and seeks maximum returns for China within acceptable risk tolerance.</p>
+
+    <p>WPD is mandated to make overseas and equity investments in financial institutions internationally, or in China or Hong Kong, directly through SPVs, direct partnerships, direct investments, or through China's subsidiaries of sovereign wealth funds including CIC International Co., Ltd., CIC Capital Corporation, and other central investment companies. These entities function as distinct investment vehicles or funds established for investment purposes, financing Chinese state-owned enterprises or Chinese interests abroad, or in partnership with international companies and sovereign wealth funds, mutual funds, or other investment funds.</p>
+
+    <p>WPD's overseas investment activities include public equity and bond investments; hedge fund and multi-asset investments; industry-wide private equity and private credit investments; direct investments and fund investments in sectors such as real estate, infrastructure, resources, mining, oil & gas, telecommunication, education, healthcare, power, renewable energy, AI & technology, industrial, logistics, ports, airports, manufacturing, commodities, farming, and agriculture; as well as managing bilateral and multilateral funds. WPD undertakes equity investments in state-owned enterprises or financial institutions in China and globally without interfering in the day-to-day operations of its portfolio companies.</p>
+
+    <p>WPD has achieved common growth through cooperation, providing benefits to people of all countries, making important contributions to global peace and development, and expressing willingness to strengthen friendly cooperation between international organizations and countries such as Malaysia, Indonesia, Egypt, and others with China.</p>
+
+    <p>Part of WPD's goals is also to ensure reliable food supply and food security, especially in vulnerable areas, developing countries, and Islamic countries in Asia, the Middle East, and Africa. By addressing ports and supply chain issues, WPD ensures that ports, infrastructure, and food are provided to the highest standards for communities in need, promoting a culturally appropriate and diverse food system worldwide.</p>
+</main>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 WORLD PEACE AND DEVELOPMENT GROUP LIMITED. All rights reserved.
+</footer>
+
+<!-- Burger Script -->
+<script>
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    burger.classList.toggle("active");
+    burger.classList.toggle("open");
+});
+
+const style = document.createElement("style");
+style.textContent = `
+    .burger.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.open div:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>

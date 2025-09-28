@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Mission - WORLD PEACE AND DEVELOPMENT GROUP LIMITED</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif; }
+    body { background:#f5f6fa; color:#2c3e50; line-height:1.6; }
+
+    /* Header */
+    #header { 
+        display:flex; 
+        align-items:center; 
+        justify-content:space-between; 
+        padding:20px 30px; 
+        background:#2c3e50; 
+        flex-wrap:wrap; 
+        position:relative;
+    }
+    #header h1 { 
+        flex:1; 
+        text-align:center; 
+        font-size:2em; 
+        margin:0; 
+        color:white;
+    }
+
+    /* Logo */
+    .logo { height:50px; width:auto; }
+
+    /* Burger Menu */
+    .burger { display:flex; flex-direction:column; cursor:pointer; gap:5px; z-index:1001; }
+    .burger div { width:25px; height:3px; background:white; border-radius:2px; transition: all 0.3s ease; }
+
+    /* Nav Menu */
+    nav ul {
+        list-style:none;
+        position:absolute;
+        top:70px; 
+        right:20px; 
+        background:#34495e;
+        flex-direction:column;
+        width:220px; 
+        display:none;
+        padding:15px;
+        border-radius:5px;
+        z-index:1000;
+    }
+    nav ul.show { display:flex; }
+    nav ul li { margin:5px 0; }
+    nav ul li a { 
+        color:white; 
+        text-decoration:none; 
+        font-weight:bold; 
+        display:block; 
+        padding:10px; 
+        border-radius:4px; 
+        transition: background 0.3s;
+    }
+    nav ul li a:hover { background:#4a5b72; }
+
+    /* Main */
+    main { max-width:900px; margin:40px auto; padding:0 20px; }
+    main h2 { font-size:2em; margin-bottom:20px; text-align:center; }
+    main p { font-size:1.1em; margin-bottom:20px; }
+
+    /* Footer */
+    footer { background:#34495e; color:white; text-align:center; padding:40px 20px; margin-top:40px; }
+
+    /* Responsive adjustments */
+    @media(max-width:768px){
+        #header { flex-direction:column; }
+        #header h1 { margin:15px 0; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <h1>Our Mission</h1>
+    <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="investment.html">Driving Global Investment</a></li>
+            <li><a href="infrastructure.html">Advancing Infrastructure & Energy</a></li>
+            <li><a href="urban.html">Transforming Urban Development</a></li>
+            <li><a href="renewal.html">Driving Urban Renewal</a></li>
+            <li><a href="partnership.html">Strategic Partnership</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<main>
+    <h2>Promoting Peace, Sustainable Development, and Global Cooperation</h2>
+
+    <p>Our mission at WORLD PEACE AND DEVELOPMENT GROUP LIMITED (WPD) is to promote global peace, foster sustainable development, and empower communities through innovative and effective initiatives.</p>
+
+    <p>We focus on projects that address critical social, economic, and environmental challenges. By creating programs that educate, support, and uplift communities, we aim to generate lasting positive impact worldwide.</p>
+
+    <p>Collaboration is at the core of our mission. WPD works with governments, local organizations, international partners, and private enterprises to implement solutions that are practical, culturally relevant, and sustainable.</p>
+
+    <p>Through strategic investments in sectors such as infrastructure, energy, healthcare, education, technology, logistics, and finance, WPD seeks to strengthen regional development, enhance food and energy security, and create sustainable economic opportunities.</p>
+
+    <p>Ultimately, our goal is to build a world where individuals and communities have the resources, knowledge, and opportunities to thrive in a peaceful, equitable, and just society.</p>
+</main>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 WORLD PEACE AND DEVELOPMENT GROUP LIMITED. All rights reserved.
+</footer>
+
+<!-- Burger Script -->
+<script>
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    burger.classList.toggle("active");
+    burger.classList.toggle("open");
+});
+
+const style = document.createElement("style");
+style.textContent = `
+    .burger.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.open div:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>

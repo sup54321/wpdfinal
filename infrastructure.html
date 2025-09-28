@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advancing Infrastructure & Energy - WORLD PEACE AND DEVELOPMENT GROUP LIMITED</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+    body { margin:0; font-family:'Arial', sans-serif; background:#f5f6fa; color:#2c3e50; line-height:1.6; }
+
+    /* Header */
+    #header { 
+        background:#2c3e50; 
+        color:white; 
+        text-align:center; 
+        padding:30px 20px; 
+        position:relative; 
+    }
+    #header h1 { 
+        font-size:2em; 
+        margin-bottom:15px; 
+        margin-left:80px; /* space for logo */
+    }
+
+    /* Logo */
+    .logo {
+        position:absolute;
+        top:20px;
+        left:20px;
+        height:50px;
+        width:auto;
+    }
+
+    /* Burger Menu */
+    .burger {
+        display:flex;
+        flex-direction:column;
+        cursor:pointer;
+        position:absolute;
+        top:30px; 
+        right:20px;
+        gap:5px;
+        z-index:1001;
+    }
+    .burger div {
+        width:25px;
+        height:3px;
+        background:white;
+        border-radius:2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Nav Menu */
+    nav ul {
+        list-style:none;
+        position:absolute;
+        top:80px; right:20px;
+        background:#34495e;
+        flex-direction:column;
+        width:220px;
+        display:none;
+        text-align:left;
+        padding:15px;
+        border-radius:5px;
+        z-index:1000;
+    }
+    nav ul.show { display:flex; }
+    nav ul li { margin:5px 0; }
+    nav ul li a {
+        color:white;
+        text-decoration:none;
+        font-weight:bold;
+        display:block;
+        padding:10px;
+        border-radius:4px;
+        transition: background 0.3s;
+    }
+    nav ul li a:hover { background:#4a5b72; }
+
+    /* Main */
+    main { max-width:900px; margin:40px auto; padding:0 20px; }
+    main h2 { font-size:2em; margin-bottom:20px; text-align:center; }
+    main p { font-size:1.1em; margin-bottom:20px; }
+
+    /* Footer */
+    footer { background:#34495e; color:white; text-align:center; padding:40px 20px; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<!-- Header with Burger Nav -->
+<div id="header">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <h1>WORLD PEACE AND DEVELOPMENT GROUP LIMITED</h1>
+    <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="investment.html">Driving Global Investment</a></li>
+            <li><a href="infrastructure.html">Advancing Infrastructure & Energy</a></li>
+            <li><a href="urban.html">Transforming Urban Development</a></li>
+            <li><a href="renewal.html">Driving Urban Renewal</a></li>
+            <li><a href="partnership.html">Strategic Partnership</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<main>
+    <h2>Infrastructure & Energy Development</h2>
+    <p>WPD aims to strengthen telecommunications infrastructure, such as investing in laying submarine and ground cables, satellite broadcasting, to ensure connectivity and access to information, especially in remote and rural areas. Developing broadband and mobile networks, supporting the provision of digital technology, Fintech, Insurtech, Payment Gateways, Payment Solutions, Digital Infrastructure, and E-Government by collaborating with telecommunications companies and governments to improve network coverage and reliability.
+    WPD investor Macau Natural Gas Co., Ltd. and partner China Petrochemical Company have established liquefied natural gas receiving terminals and storage facilities on Zhiwan Island in Zhuhai. On December 15, 2006, the franchise was granted for the import and transportation of natural gas as a public service in Macau.</p>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 WORLD PEACE AND DEVELOPMENT GROUP LIMITED. All rights reserved.</p>
+</footer>
+
+<!-- Burger Toggle Script -->
+<script>
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    burger.classList.toggle("active");
+});
+
+burger.addEventListener("click", function() {
+    this.classList.toggle("open");
+});
+
+const style = document.createElement("style");
+style.textContent = `
+    .burger.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.open div:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>

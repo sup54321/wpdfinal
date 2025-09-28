@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Partnership - WORLD PEACE AND DEVELOPMENT GROUP LIMITED</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+/* Reset & base */
+body {
+    margin:0;
+    font-family:'Arial', sans-serif;
+    background:#f5f6fa;
+    color:#2c3e50;
+    line-height:1.6;
+}
+
+/* Header */
+#header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 30px;
+    background:#2c3e50;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:1000;
+}
+#header h1 {
+    flex:1;
+    text-align:center;
+    font-size:2em;
+    margin:0;
+    color:white;
+}
+.logo {
+    height:50px;
+    width:auto;
+}
+.burger {
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+    gap:5px;
+    z-index:1001;
+}
+.burger div {
+    width:25px;
+    height:3px;
+    background:white;
+    border-radius:2px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation */
+nav ul {
+    list-style:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    background:#34495e;
+    flex-direction:column;
+    width:220px;
+    display:none;
+    padding:15px;
+    border-radius:5px;
+    z-index:999;
+}
+nav ul.show { display:flex; }
+nav ul li { margin:5px 0; }
+nav ul li a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    display:block;
+    padding:10px;
+    border-radius:4px;
+    transition: background 0.3s;
+}
+nav ul li a:hover { background:#4a5b72; }
+
+/* Main content */
+main {
+    max-width:900px;
+    margin:40px auto;
+    padding:0 20px;
+}
+main h2 {
+    font-size:2em;
+    margin-bottom:20px;
+    text-align:center;
+}
+main p {
+    font-size:1.1em;
+    margin-bottom:20px;
+}
+
+/* Footer */
+footer {
+    background:#34495e;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:40px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    #header {
+        flex-direction:row;
+    }
+    #header h1 {
+        order:2;
+        width:auto;
+        font-size:1.5em;
+        margin:0 10px;
+    }
+    nav ul {
+        width:100%;
+        right:0;
+        border-radius:0;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <h1>Strategic Partnership</h1>
+    <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="investment.html">Driving Global Investment</a></li>
+            <li><a href="infrastructure.html">Advancing Infrastructure & Energy</a></li>
+            <li><a href="urban.html">Transforming Urban Development</a></li>
+            <li><a href="renewal.html">Driving Urban Renewal</a></li>
+            <li><a href="partnership.html">Strategic Partnership</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<main>
+    <h2>Building Strong Partnerships</h2>
+    <p>MTIEL Holdings Sdn Bhd (MTIEL) and China-based World Peace and Development Limited (WPD) recently signed a strategic cooperation agreement worth US$50 billion (RM232.72 billion) to power development of the energy sector and the halal industry in the South East Asia region. MTIEL Holdings Limited in Malaysia owns the crude oil pipeline rights from Malaysia to Thailand and expertise in petrochemical and hydrocarbon trade, logistics, storage tanks, and related industries, facilitating business cooperation in the petroleum industry in Asia and the Middle East. MTIEL will also use the land of Glass City and Kedah Oblast, as well as nearby airports, to promote the logistics and warehousing of halal food supply, serving as a food storage center for countries in the Middle East, Southeast Asia, and South Asia.</p>
+    <p>As part of its strategic vision, WPD partnered with Inventure Group for development of cities, integrated destination development, industrial cities, and logistics hubs across the Middle East & Africa. WPD has already committed an investment of 500 Billion MB ($70 Billion USD) toward the development of the North West Gate Gargoub SEZ Project and Port in Egypt over 5 years, in partnership with Inventure Group and Chinese State-Owned Enterprises, including China Railway CREEC, Power China, Speco, China Harbour, China Communication Construction, China Exim Bank, and others. This investment covers port infrastructure, industrial zones, supply chain facilities, energy, food storage, financial & insurance hubs, multi-commodities centers, education, healthcare, and fiber optic connectivity to create a fully integrated regional hub for Africa.</p>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 WORLD PEACE AND DEVELOPMENT GROUP LIMITED. All rights reserved.</p>
+</footer>
+
+<!-- Burger Menu Script -->
+<script>
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    burger.classList.toggle("active");
+    burger.classList.toggle("open");
+});
+
+// Burger animation
+const style = document.createElement("style");
+style.textContent = `
+    .burger.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.open div:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
